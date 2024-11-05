@@ -77,10 +77,13 @@ const DraggableDiv = () => {
           {/* Section 1 */}
           
           <div className="col-md-4">
+          <div class="alert alert-secondary" role="alert">
+  To-Do List
+</div>
           {toDoData && toDoData.map((todo) => (
             <>
               {!todo.completed ?
-             <div className="card mb-2" style={{ width: '18rem',lineHeight:'17px' }}>
+             <div className="card mb-2" style={{ lineHeight:'17px' }}>
         
              <div className="card-body">
                 <div className='flex justify-between' style={{display: 'flex', justifyContent: 'space-between'}}>
@@ -119,10 +122,18 @@ const DraggableDiv = () => {
           </div>
 
           <div className="col-md-4">
+          <div class="alert alert-primary" role="alert">
+            In-Progress List
+            </div>
+            </div>     
+          <div className="col-md-4">
+          <div class="alert alert-success" role="alert">
+            Completed List
+            </div>
           {toDoData && toDoData.map((todo) => (
             <>
               {todo.completed ?
-             <div className="card mb-2" style={{ width: '18rem',lineHeight:'17px' }}>
+             <div className="card mb-2" style={{ lineHeight:'17px' }}>
         
              <div className="card-body">
                 <div className='flex justify-between' style={{display: 'flex', justifyContent: 'space-between'}}>
